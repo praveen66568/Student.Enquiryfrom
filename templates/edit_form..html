@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Record</title>
+</head>
+<body>
+    <h3>Edit Record</h3>
+    <form action="/edit/{{ record['_id'] }}" method="POST">
+        <!-- Include the form fields with pre-filled data from the 'record' variable -->
+        <!-- You can use the 'value' attribute to set the initial values for the fields -->
+        <label>User Name</label>
+        <input type="text" name="fname" value="{{ record['User Name'] }}">
+
+        <!-- Other form fields with pre-filled data -->
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

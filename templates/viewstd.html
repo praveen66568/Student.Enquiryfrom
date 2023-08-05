@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            border-radius:2px;
+            background-color: rgb(182, 211, 230);
+            padding: 20px;
+            margin: 50px;
+        }
+
+        .navigator{
+            display: flex;
+            align-item: center;
+            justify-content: space-evenly;
+            letter-spacing: 1px;
+            padding: 10px;
+        }
+        .button{
+            text-align:center;
+            justify-content:center;
+            padding:10px 0 2px 0;
+        }
+
+        
+        .result-container{
+            margin: 10px 0;
+            margin-top: 15px;
+            overflow-x:auto;
+
+        }
+         td {
+            text-align: left;
+            padding: 8px;
+        }
+         th{
+            text-align:center;
+
+        }
+
+
+        table{
+            border-collapse: collapse;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<form action="/onsubmit" method="POST">
+<div class="container">
+    <nav class="navigator">
+        <div>
+         <label>Course Interested</label>
+         <select style="border-radius:4px;" name="Course" id="course">
+             <option value="select">---select Course---</option>
+             <option>python</option>
+             <option>Java</option>
+             <option>C++</option>
+             <option>Selinium</option>
+             <option>Amazon service</option>
+             <option>JavaScript</option>
+             <option>Reactjs</option>
+             <option>PHP</option>
+             <option>Fullstack Developer</option>
+             <option>Front-End Developer</option>
+             <option>Back-End Developer</option>
+         </select>
+        </div>
+        <div>
+        <label>Passed out year</label>
+        <select style="border-radius:4px;" name="year" id="dropDown">
+
+                            <option value="select1">---select year---</option>
+                            <option> 2012 </option>
+                            <option> 2013 </option>
+                            <option> 2014 </option>
+                            <option> 2015 </option>
+                            <option> 2016 </option>
+                            <option> 2017 </option>
+                            <option> 2018 </option>
+                            <option> 2019 </option>
+                            <option> 2020 </option>
+                            <option> 2021 </option>
+                            <option> 2022 </option>
+                            <option> 2023 </option>
+        </select>
+            </div>
+        <div>
+        <label>Degree</label>
+        <select style="border-radius:4px;" name="degree">
+                 <option value="select2">--select the degree--</option>
+
+                 <option>Bca</option>
+                 <option>B.com</option>
+                 <option>Bsc</option>
+                 <option>B.E</option>
+                 <option>MCA</option>
+                 <option>M.com</option>
+                 <option>MBA</option>
+                 <option>BA</option>
+                 <option>BBA </option>
+                 <option>B.Tech </option>
+                 <option>Others</option>
+        </select>
+        </div>
+    </nav>
+    <div class="button">
+        <input type="submit">
+    </div>
+</form>
+
+<form action="/onsubmit" method="get">
+
+    <div class="result-container">
+        <table border="5">
+              <tr>
+                <th>User Name</th>
+                <th>Mobile No</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Course Interested</th>
+                <th>Batch Preferred</th>
+                <th>How You Came To Knew us</th>
+                <th>Passed Out Year</th>
+                <th>Degree</th>
+                <th>JOB</th>
+                <th>Preview Experinces & Domain</th>
+                <th>Comments</th>
+                <th colspan="2">Action</th>
+
+              </tr>
+            {% for emp in rows %}
+              <tr>
+                <td>{{emp['User Name']}}</td>
+                <td> {{emp['Mobile No']}}</td>
+                <td>{{emp['Email']}}</td>
+                <td>{{emp['Address']}}</td>
+                <td>{{emp['Course Interested']}}</td>
+                <td>{{emp['Batch Preferred']}}</td>
+                <td>{{emp['How You Came To Knew us']}}</td>
+                <td>{{emp['Passed Out Year']}}</td>
+                <td>{{emp['Degree']}}</td>
+                <td>{{emp['JOB']}}</td>
+                <td>{{emp['Preview Experinces & Domain']}}</td>
+                <td>{{emp['Comments']}}</td>
+                <td><a href="/edit">Edit</a></td>
+                <td><a href="/delete">Delete</a></td>
+
+              </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+</form>
+<center><h4><a href="/" > click here to HomePage</a></h4></center>
+</body>
+</html>

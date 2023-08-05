@@ -1,0 +1,201 @@
+<html>
+<title>Besant Enquiry form</title>
+
+<head>
+
+    <style>
+        .size {
+            font-style: inherit;
+            width: 60%;
+            margin-top: 10%;
+            margin-left: 20%;
+        }
+
+        input[type=text],input[type=number],input[type=mail],
+        textarea,select {
+            width: 100%;
+            background-color: rgb(224, 245, 254);
+            opacity:1;
+            padding: 12px;
+            border: 1px solid rgb(104, 100, 100);
+            border-radius: 4px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+
+        }
+
+
+       input[type=button]{
+            background-color: rgb(151, 185, 191);
+            color: rgb(41, 40, 40);
+            padding : 7px 18px;
+            border-radius: 7px;
+            cursor: pointer;
+            text-align:center;
+            margin-left: 44%;
+
+        }
+
+        input[type=button]:hover {
+            background-color: hwb(177 56% 16%);
+        }
+
+        .regpage {
+            border-radius:2px;
+            background-color: rgb(182, 211, 230);
+            padding: 20px;
+        }
+
+        .address {
+            text-align: center;
+        }
+        span {
+           margin-left: 20px;
+           color: red;
+        }
+
+        .button{
+            text-align:center;
+            justify-content:center;
+            padding:10px 0 2px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="size">
+        <div class="regpage">
+
+
+            <center><h3>ENQUIRY FORM</h3></center>
+
+                <form action="/submittodb", method="post" >
+
+
+                <label>User Name</label><span id="nameMsg"></span>
+                <input type="text" name="fname" id="fname" placeholder=" Enter Your name" >
+
+
+
+                <label>Mobile No</label><span id="mobileMsg"></span>
+                <input type="number" name="number" id="mobile" placeholder="Enter Your mobile  number" >
+
+                <label>Email</label><span id="emailMsg"></span>
+                <input type="mail" name="Email" id="email" placeholder="Enter Your Email id" >
+
+
+                <label> Address </label><span id="addressMsg"></span><textarea name="address" id="address" placeholder="Enter your Address"
+                    style="height:200px" ></textarea>
+
+                <label>Course:</label>
+                <select name="Course">
+                   <option value="select">---select course---</option>
+                   <option>python</option>
+                   <option>Java</option>
+                   <option>C++</option>
+                   <option>Selinium</option>
+                   <option>Amazon service</option>
+                   <option>JavaScript</option>
+                   <option>Reactjs</option>
+                   <option>PHP</option>
+                   <option>Fullstack Developer</option>
+                   <option>Front-End Developer</option>
+                   <option>Back-End Developer</option>
+                </select>
+
+               <br><br>
+               <label>Batch Preferred</label>
+                <input type="radio" name="batch" id="Batch" value="0">Weeekdays
+                <input type="radio" name="batch" id="Batch" value="1">Weekend
+                <br><br>
+
+                <br>
+
+                <label> How You Came To Knew us : </label><span id="crs"></span>
+                <br><br>
+                <input type="checkbox" id="about" name="ads" value="Google search" />Google search
+                <input type="checkbox" id="about" name="ads" value="website" />website
+                <input type="checkbox" id="about" name="ads" value="Ads" />Ads
+                <input type="checkbox" id="about" name="ads" value="Reference" />Reference
+
+                <br><br><br>
+
+                <label> Passed Out  Year:
+                    <select style="border-radius:4px;" id="dropDown" name="opt">
+
+                            <option value="select">---select year---</option>
+                            <option> 2012 </option>
+                            <option> 2013 </option>
+                            <option> 2014 </option>
+                            <option> 2015 </option>
+                            <option> 2016 </option>
+                            <option> 2017 </option>
+                            <option> 2018 </option>
+                            <option> 2019 </option>
+                            <option> 2020 </option>
+                            <option> 2021 </option>
+                            <option> 2022 </option>
+                            <option> 2023 </option>
+                           </select>
+
+
+                </label>
+
+                <label> Degree</label>
+                <select style="border-radius:4px;" id="dropDown1" name="degree">
+                 <option value="select1">--select the degree--</option>
+                 <option>Bca</option>
+                 <option>B.com</option>
+                 <option>Bsc</option>
+                 <option>B.E</option>
+                 <option>MCA</option>
+                 <option>M.com</option>
+                 <option>MBA</option>
+                 <option>BA</option>
+                 <option>BBA </option>
+                 <option>B.Tech </option>
+                 <option>Others</option>
+
+                </select>
+                <br><br>
+
+                <label>JOB</label>
+                <input type="radio" name="job" value="0" id="job">Need
+                <input type="radio" name="job" value="1" id="job">NoNeed
+                <br><br>
+
+               <br><br>
+               <label>Preview Experinces & Domain </label><span id="experienceMsg"></span>
+               <input type="text" name="Experince"  id="experience" >
+
+
+               <label> Comments:</label><span id="commentsMsg"></span><textarea name="Comments" id="comments" placeholder="Let us known what you need help with"
+                style="height:100px"></textarea>
+
+             <div class="button">
+             <input type="submit" value="submit">
+             </div>
+            </form>
+
+            <div class="address">
+
+                <label>
+                    <h4>E-Mail</h4> info@besanttechnologies.com
+                </label>
+
+                <label>
+                    <h4>Contact No</h4> 099625 04283
+                </label>
+
+                <label>
+                <h4>Address</h4>1st Floor, No.2A Duraisamy, Reddy St, Near Passport Seva, Tambaram West, Chennai, Tamil Nadu 60004</label>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
